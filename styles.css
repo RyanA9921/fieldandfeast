@@ -102,6 +102,7 @@ h2 {
     font-size: 1.5rem;
     color: var(--md-blue);
     font-weight: 575;
+    padding-bottom: 1rem;
 }
 
 nav {
@@ -124,17 +125,153 @@ nav a {
 }
 
 #introduction p {
-    padding: 0.5rem 0 1rem 0;
-    line-height: 1.35rem;
-    border-bottom: 2px solid;
-    border-color: var(--champagne-gold);
-    padding-bottom: 1.5rem;
-    margin-bottom: 2rem;
+  padding: 0.5rem 0 1rem 0;
+  line-height: 1.35rem;
+  border-bottom: 2px solid;
+  border-color: var(--champagne-gold);
+  padding-bottom: 1.5rem;
+  margin-bottom: 2rem;
+}
+
+#offerings {
+  border-bottom: 2px solid;
+  border-color: var(--champagne-gold);
+  margin-bottom: 1.5rem;
+}
+
+.offering-box {
+  background-color: var(--olive-green);
+  margin-bottom: 0.5rem;
+  padding: 1.5rem;
+  color: var(--soft-white);
+  border-radius: 8px;
+  box-shadow: 0 7px 12px rgba(0, 0, 0, 0.15);
+}
+
+.offering-box.full-width {
+  margin-bottom: 1rem;
+}
+
+.offering-box p {
+  line-height: 1.5rem;
+}
+
+.offering-box h3 {
+  padding-bottom: 1rem;
+  font-size: 1.25rem;
+  font-weight: bold;
+}
+
+.offering-box ul {
+  list-style: disc;
+  padding-left: 1rem;
+}
+
+.offering-box li {
+  margin-bottom: 0.5rem;
+  line-height: 1.5rem;
+}
+
+.offerings-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1 fr);
+  gap: 1rem;
+  grid-auto-rows: auto;
+}
+
+#gallery {
+  border-bottom: 2px solid;
+  border-color: var(--champagne-gold);
+  margin-bottom: 1.5rem;
+  padding-bottom: 1.5rem;
+}
+
+#gallery p {
+  margin: 0 auto;
+  line-height: 1.5rem;
+  font-size: 16px;
+  padding-bottom: 0.5rem;
+  padding-top: 0.5rem;
+}
+
+#gallery a {
+  background-color: var(--olive-green);
+  text-decoration: none;
+  color: var(--soft-white);
+  display: block;
+  width: 100%;
+  border-radius: 8px;
+  text-align: center;
+  padding: 1.25rem 0;
+  transition: transform 0.2s ease;
+  font-weight: bold;
+}
+
+#gallery a:hover {
+  transform: scale(1.07);
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  background-color: white;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  box-shadow: 5px 4px 12px rgba(0, 0, 0, 0.322);
+  overflow: hidden;
+  margin: 0.5rem;
+  max-width: 600px;
+  padding: 0;
+  text-align: center;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.card:hover {
+  transform: scale(1.05);
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.123);
+}
+
+.card img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.card p {
+  margin: 0;
+  padding: 1rem;
+  font-size: 1rem;
+  color: var(--dk-charcoal);
+  font-style: italic;
 }
 
 p {
-    font-size: 16px;
-    font-weight: 425;
+  margin: 0 auto;
+  font-size: 16px;
+  font-weight: 425;
+}
+
+footer {
+  background-color: var(--md-blue);
+  text-align: center;
+  padding: 2rem 0;
+  line-height: 1.5rem;
+  font-weight: 500;
+}
+
+address {
+  color: var(--soft-white);
+}
+
+.white-style {
+  color: var(--soft-white);
+  text-decoration: none;
+}
+
+.gold-style {
+  color: var(--champagne-gold);
+  text-decoration: none;
 }
 
 
@@ -166,11 +303,83 @@ p {
   main {
     padding: 4rem 4rem;
   }
+  #introduction p {
+    font-size: 18px;
+  }
+  #gallery p {
+    font-size: 18px;
+  }
+  .card p{
+    margin: 0 auto;
+  }
+  .card-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2rem;
+    padding-bottom: 1.5rem;
+  }
+  #offerings p {
+    font-size: 18px;
+  }
+  .offering-box {
+    margin-bottom: 0.5rem;
+  }
+  .offerings-grid {
+    grid-template-columns: repeat(2, 1fr)
+  }
+  .offering-box.full-width {
+    grid-column: 1 / -1;
+  }
 }
 
 @media (min-width: 1200px) {
   body {
     font-size: 20px;
+  }
+  header p {
+    font-size: 20px;
+    padding-bottom: 1.5rem;
+  }
+  #introduction p {
+    font-size: 20px;
+    line-height: 2rem;
+  }
+  h2 {
+    font-size: 3.5rem;
+  }
+  #offerings h3 {
+    font-size: 3rem;
+  }
+  #offerings p {
+    font-size: 24px;
+    line-height: 1.75rem;
+    padding: 1.25rem 0;
+  }
+  #offerings ul {
+    padding-left: 1.75rem;
+  }
+  #offerings li {
+    font-size: 24px;
+    line-height: 2rem;
+    padding-left: 2rem;
+  }
+  #gallery p {
+    font-size: 20px;
+    line-height: 2rem;
+    padding-bottom: 1.5rem;
+  }
+  .card-grid {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    gap: 2rem;
+    flex-wrap: nowrap;
+    padding-bottom: 2rem;
+  }
+  .card {
+    flex: 1;
+    margin: 0;
+    max-width: none;
   }
   h1{
     font-size: 5rem;
@@ -179,6 +388,7 @@ p {
     height: 400px;
   }
   main {
-    padding: 5rem 12rem;
+    max-width: 1440px;
+    padding-bottom: 1.5rem;
   }
 }
